@@ -2,6 +2,8 @@
 
 body{
     font-family: 'Roboto Slab', serif;
+    margin: 0;
+    scroll-behavior: smooth;
 }
 
 nav{
@@ -19,25 +21,28 @@ nav{
 #intro-banner{
    height: 100vh;
    position: relative;
-   color: white;
-   background-color: rgb(255, 183, 165);
+   color: black;
+   background-color: rgb(255, 229, 222);
 }
 
 .arrow{
     position: absolute;
-    bottom: 10px;
-    left: 50%;
+    bottom: 20px;
+    left: 47%;
     padding: 5px;
     border-radius: 50%;
     font-size: 200%;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
     animation: up-down 0.8s ease-in-out infinite;
 }
 
 @keyframes up-down{
-    33%{
-        transform: translateY(-10px);
+    0%,100%{
+        transform: none;
     }
-    100%{
+    50%{
         transform: translateY(10px);
     }
 }
@@ -55,22 +60,20 @@ nav{
     width: 18%;
     height: auto;
     border-radius: 50%;
+    box-shadow: 1px 1px 5px grey;
 }
 main{
     display: flex;
     justify-content: center;
 }
 
-@media (max-width:768px){
-    main{
-        margin: 0 3% 0 3%;
-    }
-}
+
 
 .my-heading{
     font-size: 120%;
-    font-weight: 600;
+    /* font-weight: 600; */
     position: relative;
+    color: maroon;
 }
 
 .my-heading::after{
@@ -81,21 +84,81 @@ main{
     margin-top: 2px;
     width: 100%;
     height: 2px;
-    background-color: grey;
+    background-color: rgb(69, 69, 69);
 }
 
 .my-section{
-    /* width: 70%; */
     justify-self: center;
+    margin-bottom: 20px;
 }
 
 .s-cont{
     font-weight: 300;
     font-size:88%;
-    padding: 0 5px 0 5px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+
+#about{
+    color: white;
+    background:  linear-gradient(to right, black 10%, #0000),url('Main_Gate_of_the_Palace.jpg');
+    background-size: cover;
+    background-position: 70%;
+}
+
+#education{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #main-content{
     margin-top: 10vh;
     width: 75%;
+}
+
+footer{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500;
+    height: max-content;
+    border-top: 1px solid rgba(128, 128, 128, 0.422);
+    font-size: 80%;
+    padding: 3px;
+    text-align: center;
+}
+
+
+@media (max-width:576px){
+    main{
+        margin: 0 3% 0 3%;
+    }
+    #main-content{
+        width: 95%;
+    }
+    #intro-banner{
+        height: 70vh;
+    }
+    #inner-banner{
+        top: 10%;
+        font-size: 1.3rem;
+    }
+    #inner-banner img{
+        width: 40%;
+        height: auto;
+    }
+    .arrow{
+        left: 44%;
+    }
+}
+
+@media (max-width:600px){
+    #intro-banner{
+        height: 90vh;
+    }
+}
+
+@media (max-width:400px){
+    #intro-banner{
+        height: 70vh;
+    }
 }
