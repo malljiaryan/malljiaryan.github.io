@@ -13,6 +13,17 @@ nav{
     padding: 10px;
     border-bottom: 2px solid rgb(255, 80, 36);
     justify-content: center;
+    font-size: 120%;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+#main-content{
+    margin-top: 5vw;
+    width: 70%;
 }
 
 #inner-nav{
