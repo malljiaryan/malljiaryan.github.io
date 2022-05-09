@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap');
 
 body{
     font-family: 'Roboto Slab', serif;
@@ -16,16 +16,86 @@ nav{
     font-size: 120%;
 }
 
+#intro-banner{
+   height: 100vh;
+   position: relative;
+   color: white;
+   background-color: rgb(255, 183, 165);
+}
+
+.arrow{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 200%;
+    animation: up-down 0.8s ease-in-out infinite;
+}
+
+@keyframes up-down{
+    33%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(10px);
+    }
+}
+
+#inner-banner{
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    font-size: 170%;
+}
+
+
+
+#inner-banner img{
+    width: 18%;
+    height: auto;
+    border-radius: 50%;
+}
 main{
     display: flex;
     justify-content: center;
 }
 
-#main-content{
-    margin-top: 5vw;
-    width: 70%;
+@media (max-width:768px){
+    main{
+        margin: 0 3% 0 3%;
+    }
 }
 
-#inner-nav{
+.my-heading{
+    font-size: 120%;
+    font-weight: 600;
+    position: relative;
+}
+
+.my-heading::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-top: 2px;
+    width: 100%;
+    height: 2px;
+    background-color: grey;
+}
+
+.my-section{
+    /* width: 70%; */
+    justify-self: center;
+}
+
+.s-cont{
+    font-weight: 300;
+    font-size:88%;
+    padding: 0 5px 0 5px;
+}
+
+#main-content{
+    margin-top: 10vh;
     width: 75%;
 }
